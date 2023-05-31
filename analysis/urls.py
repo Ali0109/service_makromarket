@@ -12,8 +12,13 @@ urlpatterns = [
     ),
     re_path(
         r'^device/users/count/(?P<year>\d+)/(?P<month>\d+)/?$',
-        views.AnalysisAPIView.as_view({'get': 'device_users_date_count'}),
-        name='device_users_date_count',
+        views.AnalysisAPIView.as_view({'get': 'device_users_month_count'}),
+        name='device_users_month_count',
+    ),
+    re_path(
+        r'^device/users/count/(?P<year>\d+)/(?P<month>\d+)/(?P<day>\d+)/?$',
+        views.AnalysisAPIView.as_view({'get': 'device_users_day_count'}),
+        name='device_users_day_count',
     ),
     # CARD
     re_path(
@@ -29,9 +34,15 @@ urlpatterns = [
     ),
     re_path(
         r"^users/count/(?P<year>\d+)/(?P<month>\d+)/?$",
-        views.AnalysisAPIView.as_view({'get': 'users_date_count'}),
-        name='users_date_count',
+        views.AnalysisAPIView.as_view({'get': 'users_month_count'}),
+        name='users_month_count',
     ),
+    re_path(
+        r"^users/count/(?P<year>\d+)/(?P<month>\d+)/(?P<day>\d+)/?$",
+        views.AnalysisAPIView.as_view({'get': 'users_day_count'}),
+        name='users_day_count',
+    ),
+    # ---
     re_path(
         r'^users/named/count/?$',
         views.AnalysisAPIView.as_view({'get': 'users_named_count'}),
