@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="69562999-8b41-484f-82b5-126f5f447efa" name="loyalty_service">
+        <fileTransfer rootFolder="/root/loyalty_service" accessType="SFTP" host="192.168.99.207" port="22" sshConfigId="5c8a3e0f-ad23-4cee-8a06-0a6eee859d7e" sshConfig="root@192.168.99.207:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

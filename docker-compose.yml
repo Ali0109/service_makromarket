@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/loyalty_service
+    ports:
+      - "8170:8170"
+    env_file:
+      - .env
+    command: python manage.py runserver 0.0.0.0:8170
+    networks:
+      - mysql-network
+
+networks:
+  mysql-network:
+    external:
+      name: mysql-network
